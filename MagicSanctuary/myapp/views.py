@@ -1,7 +1,7 @@
 from django.views.generic import ListView, DetailView, CreateView
 from django.urls import reverse_lazy
 from .models import Keeper
-from .Keeper_forms import Keeper
+from .Keeper_forms import KeeperForm
 
 
 class KeeperListView(ListView):
@@ -17,7 +17,7 @@ class KeeperDetailView(DetailView):
 class KeeperCreateView(CreateView):
     model = Keeper
     template_name = 'myapp/keeper_form.html'
-    success_url = reverse_lazy('myapp:keeper_form')
+    success_url = reverse_lazy('myapp:keeper_list')
     form_class = KeeperForm
 
 

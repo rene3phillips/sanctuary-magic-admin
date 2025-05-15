@@ -22,6 +22,6 @@ Including another URLconf
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('magic/', include ('myapp.urls')),
+    path('magic/', include(('myapp.urls', 'myapp'), namespace='myapp')),
 
 ]

@@ -4,8 +4,6 @@
 
 {% block content %}<h2>Add a new Keeper</h2>
 
-{{ form.as_p }}
-
 <form method = "post">
     {% csrf_token %}
     {{ form.as_p }}
