@@ -1,0 +1,22 @@
+{% extends 'myapp/base_magic.html' %}
+
+{% block title %}Keeper List{% endblock title %}
+
+{% block content %}
+    <h2>All Keepers</h2>
+    <ul>
+        {% for keeper in Keepers %}
+            <li>
+                <a href="{% url 'myapp:keeper_detail' keeper.pk %}">
+                    {{keeper.name}}
+                    
+                </a> - {{keeper.specialty}} - {{keeper.email}}   
+            </li>
+        {%empty%}
+            <li>
+                The list is empty
+            </li>
+        {%endfor%}
+    </ul>
+
+{% endblock content %}

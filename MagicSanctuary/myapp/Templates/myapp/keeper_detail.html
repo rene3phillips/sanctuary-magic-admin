@@ -1,0 +1,14 @@
+{% extends 'myapp/base_magic.html' %}
+
+{% block title %}{{keeper.name}}'s details{% endblock title %}
+
+{% block content %}
+    <h2>Keeper Details</h2>
+
+  <p><strong>Specialty</strong> {{keeper.specialty}}</p>
+  <p><strong>Hire Date</strong>{{keeper.hire_date}}</p>
+  <p><strong>Email</strong>{{keeper.contact_email}}</p>
+
+<a href="{% url 'myapp.keeper_list' %}">Back to Keeper List</a>
+
+{% endblock content %}
